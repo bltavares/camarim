@@ -31,6 +31,12 @@ logs = ['camarim']
 camarim::install!();
 ```
 
+### Build your library with the feature enabled
+
+```sh
+cross build --features logs --target x86_64-linux-android
+```
+
 ### Call the setup to intialize the logger
 
 On the FFI side, use the `camarim_setup_logger` function to setup the logging.
