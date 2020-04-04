@@ -3,6 +3,15 @@ name = 'camarim'
 version = '0.1.0'
 authors = ['Bruno Tavares']
 edition = '2018'
+description = 'Easy setup logging on FFI libs for mobile devices'
+repository = 'https://github.com/bltavares/camarim'
+license = 'MIT OR Apache-2.0'
+tags = [
+    'ffi',
+    'android',
+    'ios',
+    'logging',
+]
 
 [dependencies]
 log = '0.4.8'

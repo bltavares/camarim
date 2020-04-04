@@ -17,7 +17,7 @@ On `Cargo.toml` add:
 
 ```toml
 [dependencies.camarim]
-git = 'https://github.com/bltavares/camarim.git'
+version = '0.1.0'
 optional = true
 
 [features]
