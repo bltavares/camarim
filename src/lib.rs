@@ -16,8 +16,7 @@ fn logging() {
 #[cfg(all(not(target_os = "ios"), not(target_os = "android")))]
 fn logging() {}
 
-#[no_mangle]
-pub extern "C" fn camarim_setup_logger() {
+pub fn setup_logger() {
     logging();
     std::panic::set_hook(Box::new(|e| {
         log::error!("Error: {:?}", e);
@@ -29,8 +28,8 @@ pub extern "C" fn camarim_setup_logger() {
 macro_rules! install {
     () => {
         #[no_mangle]
-        pub extern "C" fn expose_setup_logger() {
-            camarim::camarim_setup_logger();
+        extern "C" fn camarim_setup_logger() {
+            camarim::setup_logger();
         }
     };
 }
