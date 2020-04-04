@@ -52,9 +52,7 @@ final ffi.DynamicLibrary _myLib = Platform.isAndroid
 
 
 /// Find `camarim_setup_logger` to call it during your app startup
-final startLogger =
-    _sledNative.lookupFunction<ffi.Void Function(), void Function()>(
-        "camarim_setup_logger");
+final startLogger = _myLib.lookupFunction<ffi.Void Function(), void Function()>("camarim_setup_logger");
 
 /// ... declare the your crate exposed functions
 ```
