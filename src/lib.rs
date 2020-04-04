@@ -29,7 +29,7 @@ pub extern "C" fn camarim_setup_logger() {
 macro_rules! install {
     () => {
         #[no_mangle]
-        extern "C" fn expose_setup_logger() {
+        pub extern "C" fn expose_setup_logger() {
             camarim::camarim_setup_logger();
         }
     };
