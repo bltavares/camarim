@@ -63,3 +63,7 @@ final startLogger =
 
 - [ ] WASM and Browser logging?
 - [ ] Provide ways to customize log level?
+
+## Relevant issues
+
+- [Re-export C symbols](https://github.com/rust-lang/rfcs/issues/2771) - to remove macro needs
