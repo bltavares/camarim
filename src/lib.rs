@@ -24,3 +24,14 @@ pub extern "C" fn camarim_setup_logger() {
         println!("Custom panic hook");
     }));
 }
+
+#[macro_export]
+macro_rules! install {
+    () => {
+        extern crate camarim;
+        #[no_mangle]
+        extern "C" fn expose_setup_logger() {
+            camarim::camarim_setup_logger();
+        }
+    };
+}
